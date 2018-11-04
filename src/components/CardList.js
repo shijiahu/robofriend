@@ -6,6 +6,7 @@ const CardList = ({robots})=>{
 		return (
 			<Card 
 			key={i} 
+			// unique key is for react to know which one should be deleted !important
 			id={user.id} 
 			name={user.name} 
 			email={user.email} 
