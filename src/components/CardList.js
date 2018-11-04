@@ -2,6 +2,10 @@ import React from 'react';
 import Card from './Card';
 
 const CardList = ({robots})=>{
+	// if (true){
+	// 	throw new Error('Nooooooooo!');
+	// }
+	// errorboundry test!
 	const cardsArray = robots.map((user,i)=>{
 		return (
 			<Card 
