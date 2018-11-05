@@ -1,17 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider, connect } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { createLogger } from 'redux-logger';
 import thunkMiddleware from 'redux-thunk';
+// async
 import './index.css';
 import App from './containers/App';
 import * as serviceWorker from './serviceWorker';
 import 'tachyons';
-import { searchRobots } from './reducers.js';
+import { searchRobots, requestRobots } from './reducers.js';
 
 const logger = createLogger();
-const store = createStore(searchRobots, applyMiddleware( thunkMiddleware ,logger));
+const rootReducers = combineReducers({ searchRobots, requestRobots });
+// combine all reducers into root reducers
+const store = createStore(rootReducers, applyMiddleware( thunkMiddleware, logger));
 // 														order: first thunk, then logger
 
 
