@@ -5,7 +5,7 @@ class Header extends Component{
 		return false;
 	}
 	render(){
-		console.log('Header');
+		// console.log('Header');
 		return <h1 className='f1'>RoboFriends</h1>
 	}
 }
