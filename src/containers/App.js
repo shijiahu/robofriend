@@ -3,6 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import CardList from '../components/CardList';
 import SerchBox from '../components/SerchBox';
+import Header from '../components/Header';
 import './App.css';
 import Scroll from '../components/Scroll';
 import ErrorBoundry from '../components/ErrorBoundry';
@@ -65,7 +66,7 @@ class App extends React.Component {
       return(
         // need to return a single parent, such as a div
       <div className='tc'>
-        <h1 className='f1'>RoboFriends</h1>
+        <Header />
         <SerchBox searchChange = {onSearchChange}/>
         <Scroll>
           <ErrorBoundry>
