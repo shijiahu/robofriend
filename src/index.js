@@ -16,11 +16,11 @@ const rootReducers = combineReducers({ searchRobots, requestRobots });
 // combine all reducers into root reducers
 const store = createStore(rootReducers, applyMiddleware( thunkMiddleware));
 // 														order: first thunk, then logger
-if (process.env.NODE_ENV !== 'production') {
-  const {whyDidYouUpdate} = require('why-did-you-update');
-  whyDidYouUpdate(React);
-}
 
+// if (process.env.NODE_ENV !== 'production') {
+//   const {whyDidYouUpdate} = require('why-did-you-update');
+//   whyDidYouUpdate(React);
+// }
 
 ReactDOM.render(
 	<Provider store={store}>
